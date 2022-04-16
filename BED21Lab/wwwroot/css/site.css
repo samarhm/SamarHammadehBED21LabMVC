@@ -1,0 +1,24 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+.flowerPhoto {
+    box-shadow: 10px 10px 10px #c1bebe;
+    display: block;
+    width: 500px;
+    margin: 30px auto;
+}

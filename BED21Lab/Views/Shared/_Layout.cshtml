@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - BED21Lab</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/BED21Lab.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">BED21Lab</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - BED21Lab - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+<p>Separate view for each photo. Good for static content. 
+ Example: <a 
+href="http://yorktown.cbe.wwu.edu/students/191/csandvig/music/about" 
+>music/About</a></p>
+<ul>
+ <li><a href="~/photos/cosmos">Cosmos</a></li>
+ <li><a href="~/photos/dahlia">Dahlia</a></li>
+ <li><a href="~/photos/lotus">Lotus</a></li>
+</ul>
+<p>Use parameter to pass in ID. Good for dynamic content. 
+ Example: <a href="
+https://web.archive.org/web/20210428041303/https://yorktown.cbe.wwu.e
+du/students/191/csandvig/music/details/B000002U82
+">music/Details/B000002U82</a></p>
+<ul>
+ <li><a href="~/photos/photoView?id=Cosmos">Cosmos</a></li>
+ <li><a href="~/photos/photoView?id=Dahlia">Dahlia</a></li>
+ <!-- MVC routing is configured pass to pass ID parameter in path 
+-->
+ <li><a href="~/photos/photoView/Cherry">Cherry</a></li>
+ <li><a href="~/photos/photoView/Lotus">Lotus</a></li>
+</ul>
+}

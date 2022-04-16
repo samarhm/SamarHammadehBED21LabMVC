@@ -1,0 +1,12 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = ViewBag.photo;
+}
+<h2>@ViewBag.photo</h2>
+<img src="~/Content/images/flowers/@(ViewBag.photo).jpg" 
+alt="@(ViewBag.photo)" class="flowerPhoto" />
+<p><a href="~/photos/">Flower Photos home</a></p>
+
+

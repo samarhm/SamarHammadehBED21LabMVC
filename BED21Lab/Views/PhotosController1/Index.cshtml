@@ -1,0 +1,27 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    <p>Separate view for each photo. Good for static content. 
+ Example: <a 
+href="http://yorktown.cbe.wwu.edu/students/191/csandvig/music/about" 
+>music/About</a></p>
+<ul>
+ <li><a href="~/photos/cosmos">Cosmos</a></li>
+ <li><a href="~/photos/dahlia">Dahlia</a></li>
+ <li><a href="~/photos/lotus">Lotus</a></li>
+</ul>
+<p>Use parameter to pass in ID. Good for dynamic content. 
+ Example: <a href="
+https://web.archive.org/web/20210428041303/https://yorktown.cbe.wwu.e
+du/students/191/csandvig/music/details/B000002U82
+">music/Details/B000002U82</a></p>
+<ul>
+ <li><a href="~/photos/photoView?id=Cosmos">Cosmos</a></li>
+ <li><a href="~/photos/photoView?id=Dahlia">Dahlia</a></li>
+ <!-- MVC routing is configured pass to pass ID parameter in path 
+-->
+ <li><a href="~/photos/photoView/Cherry">Cherry</a></li>
+ <li><a href="~/photos/photoView/Lotus">Lotus</a></li>
+</ul>
+}
